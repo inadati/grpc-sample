@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.tokikokoko.hellogrpc.server";
+option java_outer_classname = "HelloGrpc";
+
+package HelloGrpc;
+
+// The greeting service definition.
+service HelloGrpc {
+    // Sends a greeting
+    rpc GreetServer (GreetRequest) returns (GreetMessage) {}
+}
+
+message GreetRequest {
+    string name = 1;
+}
+
+message GreetMessage {
+    string msg = 1;
+}
